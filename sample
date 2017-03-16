@@ -1,0 +1,47 @@
+/**
+=========================
+    2016.5.8 by Season
+=========================
+*/
+program abc;
+var
+	a,b,c:integer;
+	d,e,f:integer;
+	zzz:integer;
+begin
+	//[boolean?exp:exp]
+	b:=2*([a>b?a:b]+5);
+	
+	//binary and hex number
+	c:=0001+(233*(0x2B3F+233));
+	
+	//Cxxxxxxxx is color pattern
+	d:=CFF405060;
+	
+	//for procedure
+	for a:=1 to b do
+	begin
+		d:=d+1;
+	end
+	
+	//call sub procedure
+	sub(a,b,zzz);
+	
+	//customed operation
+	a<-->b;
+	
+	//while procedure and boolean expression
+	while !(c>500 || c<2000) && (a=1)
+	do begin
+		if c<1
+		then
+			c:=c;
+		else
+			if c<4
+			then;
+			else if (a>b)
+			then begin
+				b:=2;
+			end
+	end
+end.

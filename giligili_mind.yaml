@@ -1,0 +1,231 @@
+#==========================
+#	 2016.5.8 by Season
+#==========================
+
+# *** yaml file uses space instead of tab.
+# **  some operators must surround with ' '.
+# *   be careful on spelling.
+
+!priv.season.cp.YamlInfoBean
+
+# ====================patterns========================
+# order implies priority.
+# format:
+# pattern_name: pattern
+patterns: !java.util.LinkedHashMap
+   <id>: '[a-zA-Z][0-9a-zA-Z]{0,7}'
+   <num>: '0|[1-9][0-9]*'
+   <num_2>: '0[01]+'
+   <num_16>: '0x[0-9A-Fa-f]+'
+   <color_8>: 'C[0-9A-Fa-f]{8}'
+
+# =======================grammar==========================
+# never remove <grammar_entrance>.
+# <ctrl_optional> is a special control tag, cannot rename.
+# order implies priority.
+# template includes grammar_name, pattern_name, defined operators and reserve words.
+# format:
+# grammar_name:
+# - - template 1_1
+#   - template 1_2
+# - - template 2_1
+# - - template 3_1
+# ......
+grammar: !java.util.LinkedHashMap
+   <grammar_entrance>:
+   -  - <program>
+   <program>: 
+   -  - program
+      - <id>
+      - ;
+      - <program_body>
+      - <ctrl_optional>
+      - <program>
+   <program_body>: 
+   -  - <param_declare>
+      - begin
+      - <proc_sequence>
+      - end
+      - .
+   <param_declare>: 
+   -  - <ctrl_optional>
+      - var
+      - <ctrl_optional>
+      - <param_declare_body>
+   <param_declare_body>: 
+   -  - <param_sequence>
+      - ':'
+      - <param_type>
+      - ;
+      - <ctrl_optional>
+      - <param_declare_body>
+   <param_type>: 
+   -  - integer
+   <param_sequence>: 
+   -  - <id>
+      - <ctrl_optional>
+      - ','
+      - <param_sequence>
+   <proc_sequence>: 
+   -  - <ctrl_optional>
+      - <proc>
+      - <ctrl_optional>
+      - <proc_sequence>
+   <proc>: 
+   -  - <proc_for>
+   -  - <proc_call>
+   -  - <proc_complex>
+   -  - <proc_assign>
+   -  - <proc_if>
+   -  - <proc_while>
+   -  - <proc_change>
+   -  - ;
+   <proc_call>: 
+   -  - <id>
+      - (
+      - <param_sequence>
+      - )
+      - ;
+   <proc_change>:
+   - - <id>
+     - '<-->'
+     - <id>
+     - ;
+   <proc_complex>: 
+   -  - begin
+      - <proc_sequence>
+      - end
+   <proc_assign>: 
+   -  - <id>
+      - :=
+      - <exp>
+      - ;
+   <proc_for>:
+   -  - for
+      - <id>
+      - :=
+      - <exp>
+      - to
+      - <exp>
+      - do
+      - <proc>
+   <proc_if>: 
+   -  - if
+      - <exp_boolean>
+      - then
+      - <proc>
+      - <ctrl_optional>
+      - else
+      - <proc>
+   <proc_while>: 
+   -  - while
+      - <exp_boolean>
+      - do
+      - <proc>
+   <exp>: 
+   -  - <exp_element>
+      - <ctrl_optional>
+      - +
+      - <exp>
+   <exp_element>: 
+   -  - <exp_factor>
+      - <ctrl_optional>
+      - '*'
+      - <exp_element>
+   <exp_factor>: 
+   -  - <exp_miniif>
+   -  - <num>
+   -  - <num_2>
+   -  - <num_16>
+   -  - <color_8>
+   -  - <id>
+   -  - (
+      - <exp>
+      - )
+   <exp_miniif>: 
+   -  - '['
+      - <exp_boolean>
+      - '?'
+      - <exp_factor>
+      - ':'
+      - <exp_factor>
+      - ']'
+   <exp_boolean>: 
+   -  - '!'
+      - <exp_boolean>
+   -  - <exp_relation>
+      - '&&'
+      - <exp_boolean>
+   -  - <exp_relation>
+      - '||'
+      - <exp_boolean>
+   -  - <exp_relation>
+   -  - (
+      - <exp_boolean>
+      - )
+   <exp_relation>: 
+   -  - (
+      - <exp_boolean>
+      - )
+   -  - <exp>
+      - <relationship>
+      - <exp>
+   <relationship>: 
+   -  - <
+   -  - <=
+   -  - '>'
+   -  - '>='
+   -  - =
+   -  - <>
+
+# ====================annoation=======================
+# modify only.
+anno_left: /*
+anno_line: //
+anno_right: '*/'
+
+# ====================reserves========================
+reserves: !java.util.Arrays$ArrayList
+- program
+- var
+- procedure
+- begin
+- end
+- if
+- then
+- else
+- while
+- do
+- call
+- integer
+- real
+- for
+- to
+
+# ====================operators========================
+opts: !java.util.Arrays$ArrayList
+# longer opts has higher priority.
+- '['
+- ']'
+- '?'
+- +
+- '-'
+- '*'
+- /
+- <
+- '>'
+- (
+- )
+- =
+- '!'
+- ;
+- ':'
+- .
+- ','
+- :=
+- <=
+- '>='
+- <>
+- '||'
+- '&&'
+- '<-->'
