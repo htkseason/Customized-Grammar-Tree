@@ -1,7 +1,7 @@
 # CustomizedGrammarTree  
-----
-#### A grammar tree generator.
-#### Can generate an _amazing_ grammar tree using your own _customized_ grammar!
+
+A grammar tree generator.
+Can generate an __amazing__ grammar tree using your own __customized__ grammar!
   
 This is a project for my university course 'Compile Principles'.  
 Modified many times according to my tutor as she can use it in later semesters which makes me exhausted orz.  
