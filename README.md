@@ -1,2 +1,19 @@
-# CustomizedGrammarTree
-A grammar tree generator. Can parse your code and generate an amazing grammar tree using your own customized grammar!
+# CustomizedGrammarTree  
+----
+### A grammar tree generator.  
+### Can generate an _amazing_ grammar tree using your own _customized_ grammar!  
+  
+### This is a project for my university course 'Compile Principles'.  
+### Modified many times according to my tutor as she can use it in later semesters which makes me exhausted orz.  
+  
+----
+  
+__The Grammar Tree__  control instructions are at left-bottom   
+![](https://github.com/htkseason/CustomizedGrammarTree/tree/master/preview/pv_tree.jpg)
+
+__Customized Grammar__  You can modify freely refer to the instructions in '.yaml' file   
+![](https://github.com/htkseason/CustomizedGrammarTree/tree/master/preview/pv_grammar.jpg)
+
+__Friendly & Moe UI__  User-friendly UI  
+![](https://github.com/htkseason/CustomizedGrammarTree/tree/master/preview/pv_ui.jpg)
+
