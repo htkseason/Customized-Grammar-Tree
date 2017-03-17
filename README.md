@@ -9,7 +9,7 @@ Modified many times according to my tutor as she can use it in later semesters w
 ----
   
 __The Grammar Tree__  
-control instructions are at left-bottom   
+Control instructions are at left-bottom   
 ![tree](https://github.com/htkseason/CustomizedGrammarTree/raw/master/preview/pv_tree.jpg)
 
 __Customized Grammar__  
