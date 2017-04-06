@@ -1,4 +1,4 @@
-package priv.season.cp.ui.parts;
+package pers.season.cp.ui.parts;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -14,11 +14,11 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
-public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
+public class SeasonVerticalScrollBar extends BasicScrollBarUI {
 
 	private Color backColor, foreColor;
 
-	public SeasonHorizontalScrollBar(Color backColor, Color foreColor) {
+	public SeasonVerticalScrollBar(Color backColor, Color foreColor) {
 		super();
 		this.backColor = backColor;
 		this.foreColor = foreColor;
@@ -38,11 +38,11 @@ public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
 	protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
 		g.translate(thumbBounds.x, thumbBounds.y);
 		g.setColor(foreColor);
-		g.drawRoundRect(0, 5, thumbBounds.width - 1, 6, 5, 5);
+		g.drawRoundRect(5, 0, 6, thumbBounds.height - 1, 5, 5);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 		g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
-		g2.fillRoundRect(0, 5, thumbBounds.width - 1, 6, 5, 5);
+		g2.fillRoundRect(5, 0, 6, thumbBounds.height - 1, 5, 5);
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
 	}
 
 	private ImageIcon getUpButtonImage() {
-		BufferedImage bi = new BufferedImage(30, 17, BufferedImage.TYPE_INT_RGB);
+		BufferedImage bi = new BufferedImage(17, 30, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g = (Graphics2D) bi.getGraphics();
 		RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g.addRenderingHints(rh);
@@ -68,7 +68,7 @@ public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
 		g.fillRect(0, 0, bi.getWidth(), bi.getHeight());
 
 		g.setColor(foreColor);
-		Polygon t1 = new Polygon(new int[] { 23, 8, 23, 20 },new int[] { 4, 8, 12, 8 },  4);
+		Polygon t1 = new Polygon(new int[] { 4, 8, 12, 8 }, new int[] { 23, 8, 23, 20 }, 4);
 		g.drawPolygon(t1);
 		g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
 		g.fillPolygon(t1);
@@ -78,7 +78,7 @@ public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
 	}
 
 	private ImageIcon getDownButtonImage() {
-		BufferedImage bi = new BufferedImage(30, 17, BufferedImage.TYPE_INT_RGB);
+		BufferedImage bi = new BufferedImage(17, 30, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g = (Graphics2D) bi.getGraphics();
 		RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g.addRenderingHints(rh);
@@ -86,7 +86,7 @@ public class SeasonHorizontalScrollBar extends BasicScrollBarUI {
 		g.fillRect(0, 0, bi.getWidth(), bi.getHeight());
 
 		g.setColor(foreColor);
-		Polygon t1 = new Polygon( new int[] { 8, 23, 8, 11 },new int[] { 4, 8, 12, 8 }, 4);
+		Polygon t1 = new Polygon(new int[] { 4, 8, 12, 8 }, new int[] { 8, 23, 8, 11 }, 4);
 		g.drawPolygon(t1);
 		g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
 		g.fillPolygon(t1);

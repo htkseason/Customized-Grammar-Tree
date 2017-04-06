@@ -1,6 +1,6 @@
-package priv.season.cp.grammar;
+package pers.season.cp.grammar;
 
-import priv.season.cp.reader.WordBean;
+import pers.season.cp.reader.WordBean;
 
 public class GramError {
 	WordBean errorWb;

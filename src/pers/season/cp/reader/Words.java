@@ -1,4 +1,4 @@
-package priv.season.cp.reader;
+package pers.season.cp.reader;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import priv.season.cp.YamlInfoBean;
+import pers.season.cp.YamlInfoBean;
 
 public final class Words {
 	private final static int STANDARD_OPT_LENGTH = 2;

@@ -1,4 +1,4 @@
-package priv.season.cp.ui;
+package pers.season.cp.ui;
 
 import java.awt.KeyboardFocusManager;
 import java.awt.Toolkit;
@@ -9,7 +9,8 @@ import java.util.Collections;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import priv.season.cp.grammar.GramNode;
+import pers.season.cp.grammar.GramNode;
+
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 

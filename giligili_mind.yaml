@@ -6,7 +6,7 @@
 # **  some operators must surround with ' '.
 # *   be careful on spelling.
 
-!priv.season.cp.YamlInfoBean
+!pers.season.cp.YamlInfoBean
 
 # ====================patterns========================
 # order implies priority.

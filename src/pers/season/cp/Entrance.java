@@ -1,6 +1,6 @@
-package priv.season.cp;
+package pers.season.cp;
 
-import priv.season.cp.ui.EntranceUI;
+import pers.season.cp.ui.EntranceUI;
 
 public final class Entrance {
 	public static void main(String[] args) {

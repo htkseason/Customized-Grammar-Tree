@@ -1,4 +1,4 @@
-package priv.season.cp.reader;
+package pers.season.cp.reader;
 
 import java.util.LinkedList;
 

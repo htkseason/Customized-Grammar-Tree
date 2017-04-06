@@ -1,4 +1,4 @@
-package priv.season.cp.ui;
+package pers.season.cp.ui;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 import javax.swing.JPanel;
 
-import priv.season.cp.grammar.GramNode;
+import pers.season.cp.grammar.GramNode;
 
 public class TreePanel extends JPanel {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package priv.season.cp.reader;
+package pers.season.cp.reader;
 
 public class WordBean {
 	public final static int TYPE_ERROR = -1;

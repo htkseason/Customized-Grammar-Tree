@@ -1,8 +1,9 @@
-package priv.season.cp.grammar;
+package pers.season.cp.grammar;
 
 import java.util.HashMap;
 import java.util.List;
-import priv.season.cp.YamlInfoBean;
+
+import pers.season.cp.YamlInfoBean;
 
 public final class Grammar {
 	public static HashMap<String, List<List<String>>> grammarMap;

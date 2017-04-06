@@ -1,9 +1,9 @@
-package priv.season.cp.grammar;
+package pers.season.cp.grammar;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import priv.season.cp.reader.WordBean;
+import pers.season.cp.reader.WordBean;
 
 public class GramNode {
 

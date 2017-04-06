@@ -1,15 +1,8 @@
-package priv.season.cp.ui;
+package pers.season.cp.ui;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-
-import priv.season.cp.YamlInfoBean;
-import priv.season.cp.grammar.CodeGrammer;
-import priv.season.cp.reader.CodeReader;
-import priv.season.cp.reader.WordBean;
-import priv.season.cp.ui.parts.SeasonHorizontalScrollBar;
-import priv.season.cp.ui.parts.SeasonVerticalScrollBar;
 
 import java.awt.KeyboardFocusManager;
 import java.awt.Rectangle;
@@ -22,6 +15,13 @@ import java.util.Collections;
 import java.util.Scanner;
 import javax.swing.JTextArea;
 import javax.swing.text.BadLocationException;
+
+import pers.season.cp.YamlInfoBean;
+import pers.season.cp.grammar.CodeGrammer;
+import pers.season.cp.reader.CodeReader;
+import pers.season.cp.reader.WordBean;
+import pers.season.cp.ui.parts.SeasonHorizontalScrollBar;
+import pers.season.cp.ui.parts.SeasonVerticalScrollBar;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;

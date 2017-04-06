@@ -1,4 +1,4 @@
-package priv.season.cp;
+package pers.season.cp;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,8 +10,8 @@ import javax.swing.JOptionPane;
 
 import net.sourceforge.yamlbeans.YamlException;
 import net.sourceforge.yamlbeans.YamlReader;
-import priv.season.cp.grammar.Grammar;
-import priv.season.cp.reader.Words;
+import pers.season.cp.grammar.Grammar;
+import pers.season.cp.reader.Words;
 
 public class YamlInfoBean {
 	public List<String> reserves;
